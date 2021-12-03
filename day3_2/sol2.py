@@ -9,8 +9,7 @@ rows,cols = oxData.shape
 i = 0
 while rows > 1:
     
-    oxDataT = oxData.transpose()
-    sumofDigits = np.sum(oxDataT,1)[i]
+    sumofDigits = oxData[:,i].sum()
     if sumofDigits >= rows/2:
         target = 1
     else:
@@ -18,7 +17,6 @@ while rows > 1:
     
     # Filter column
     oxData = oxData[(oxData[:,i] == target)]
-    print(oxData,"\n")
     rows,cols = oxData.shape
     i += 1
 
@@ -31,8 +29,7 @@ rows,cols = co2Data.shape
 i = 0
 while rows > 1:
     
-    co2DataT = co2Data.transpose()
-    sumofDigits = np.sum(co2DataT,1)[i]
+    sumofDigits = co2Data[:,i].sum()
     if sumofDigits >= rows/2:
         target = 0
     else:
@@ -40,7 +37,6 @@ while rows > 1:
     
     # Filter column
     co2Data = co2Data[(co2Data[:,i] == target)]
-    print(co2Data,"\n")
     rows,cols = co2Data.shape
     i += 1
 
