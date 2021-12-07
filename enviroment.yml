@@ -1,0 +1,7 @@
+name: aoc-2021
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - numpy
+  - sympy
