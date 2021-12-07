@@ -1,7 +1,9 @@
-name: aoc-2021
+name: /home/niklas/src/aoc-2021/env
 channels:
   - defaults
 dependencies:
   - jupyter
-  - numpy
   - sympy
+  - numpy
+  - matplotlib
+prefix: /home/niklas/src/aoc-2021/env
